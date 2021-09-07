@@ -55,4 +55,24 @@ public class NodeList {
         tailNode = tailNode.previousNode;
         return node;
     }
+
+    public String printFromHead() {
+        String result = "";
+        Node currentNode = headNode;
+        while (currentNode != null) {
+            result = result + currentNode.name;
+            currentNode = currentNode.nextNode;
+        }
+        return result;
+    }
+
+    public String printFromTail() {
+        String result = "";
+        Node currentNode = tailNode;
+        while (currentNode != null) {
+            result = result + currentNode.name;
+            currentNode = currentNode.previousNode;
+        }
+        return result;
+    }
 }
